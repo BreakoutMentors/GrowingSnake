@@ -2,9 +2,6 @@ import random,pygame,sys
 pygame.init()
 pygame.key.set_repeat(20, 20)
 screen = pygame.display.set_mode([660,480])
-white = [255, 255, 255]
-green = [0, 255, 0]
-dark_blue = [0, 0, 150]
 
 def is_touching_snake(x,y):
     #look at each snake part to see if it is at the x and y position
@@ -88,7 +85,10 @@ def draw_everything():
     pygame.draw.circle(screen, dark_blue, [dot_grid_x * square_size + square_size/2, dot_grid_y * square_size + square_size/2], square_size/2, 0)    
     pygame.display.update()
 
-
+#create variables
+white = [255, 255, 255]
+green = [0, 255, 0]
+dark_blue = [0, 0, 150]
 myfont = pygame.font.SysFont("Arial", 22)
 snake_grid_x = [11,10] #list of all the snake part's x locations
 snake_grid_y = [8,8] #list of all the snake part's y locations
